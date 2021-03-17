@@ -52,7 +52,7 @@ export class ProductComponent implements OnInit {
       this.toastrService.error("Hata","Bu ürün sepete eklenemez")
     }else{
       this.toastrService.success("Sepete eklendi",product.productName)
-      
+      this.cartService.addToCart(product);
     }
 }
 }
